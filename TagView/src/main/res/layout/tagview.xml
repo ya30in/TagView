@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fields of activities*"
+        android:textSize="12sp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_drop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tagview_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ll_icon_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_drop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_drop"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_up" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_icon_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_drop"
+            app:layout_constraintEnd_toStartOf="@+id/ll_drop"
+            app:layout_constraintStart_toEndOf="@+id/rv_tagview_select"
+            app:layout_constraintTop_toTopOf="@+id/ll_drop">
+
+            <ImageView
+                android:id="@+id/icon_info"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_alert_icon" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/underLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/item"/>
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="3dp"
+        android:gravity="center_vertical|start"
+        android:text=""
+        android:textColor="@color/red_600"/>
+    <LinearLayout
+        android:id="@+id/ll_tagview_unselect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/white">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tagview_unselect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+</LinearLayout>
